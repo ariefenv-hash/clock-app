@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>时钟</title>
+  <meta name="description" content="闹钟、世界时钟、秒表、计时器 —— 轻拟物质感主题 PWA（纯静态版，无需构建）">
+  <meta name="theme-color" content="#e9edf4">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="时钟">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/views.css">
+</head>
+<body>
+  <!-- 云母瓷面背景：环境光 + 陶瓷颗粒 -->
+  <div class="bg-light" aria-hidden="true"></div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- 桌面侧边导航（JS 填充） -->
+  <nav class="side-nav" id="sideNav" aria-label="时钟功能导航"></nav>
+
+  <!-- 主内容（四个视图根节点由 JS 构建） -->
+  <main class="view" id="view"></main>
+
+  <!-- 移动端底部导航（JS 填充） -->
+  <nav class="tabbar" id="tabbar" aria-label="时钟功能导航"></nav>
+
+  <noscript>需要启用 JavaScript 才能使用本应用。</noscript>
+
+  <script src="./js/utils.js"></script>
+  <script src="./js/store.js"></script>
+  <script src="./js/cities.js"></script>
+  <script src="./js/ringtones.js"></script>
+  <script src="./js/components.js"></script>
+  <script src="./js/ringtone-modal.js"></script>
+  <script src="./js/ring-overlay.js"></script>
+  <script src="./js/views-alarm.js"></script>
+  <script src="./js/views-world.js"></script>
+  <script src="./js/views-stopwatch.js"></script>
+  <script src="./js/views-timer.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
